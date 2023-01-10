@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
+import 'package:quran/constants.dart';
 import 'package:quran/screens/surah_screen.dart';
 import 'package:quran/utils/styles.dart';
+import 'package:get/get.dart';
 
 class SurahList extends StatefulWidget {
   const SurahList({Key? key}) : super(key: key);
@@ -35,8 +37,9 @@ class _SurahListState extends State<SurahList> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 450,
+    return Container(
+      // color: Colors.red,
+      // height:  ,
       child: ListView(scrollDirection: Axis.vertical, children: [
         ...(surahList.map(
           (e) => GestureDetector(
@@ -88,7 +91,7 @@ class _SurahListState extends State<SurahList> {
               ),
             ),
           ),
-        ))
+        )),
       ]),
     );
   }

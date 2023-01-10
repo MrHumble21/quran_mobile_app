@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quran/screens/main_page.dart';
+import 'package:quran/screens/appbar.dart';
+// import 'package:quran/screens/main_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
       ),
-      home: const MainPage(),
+      home: SurahListScrollable(),
     );
   }
 }

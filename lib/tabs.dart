@@ -15,7 +15,6 @@ class _CustomTabsState extends State<CustomTabs> {
   List<Widget> tabs = [
     SurahList(),
     Text("Surah"),
-
     Text("Page"),
   ];
   @override

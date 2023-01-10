@@ -25,23 +25,6 @@ class MainPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Asslamu alaikum',
-                    style: StyleCollections.headerTextLight,
-                  ),
-                  const Gap(10),
-                  Text(
-                    'Abdulboriy Malikov',
-                    style: StyleCollections.headerTextDark2,
-                  ),
-                ],
-              ),
-            ),
-            Padding(
               padding: EdgeInsets.all(10),
               child: Column(
                 children: [
@@ -49,7 +32,7 @@ class MainPage extends StatelessWidget {
                     borderRadius: const BorderRadius.all(Radius.circular(16)),
                     child: Container(
                       width: AppLayout.getScreenWidth() *95,
-                      height: 150,
+                      height: AppLayout.getScreenWidth() < 400 ? 120 :150,
                       decoration: const BoxDecoration(
                         gradient: LinearGradient(
                             colors: [
@@ -62,6 +45,23 @@ class MainPage extends StatelessWidget {
                             tileMode: TileMode.clamp),
                       ),
                       child: Stack(children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Asslamu alaikum',
+                                style: StyleCollections.headerTextLight,
+                              ),
+                              const Gap(10),
+                              Text(
+                                'Abdulboriy \nMalikov',
+                                style: StyleCollections.headerTextDark2,
+                              ),
+                            ],
+                          ),
+                        ),
                         // Container(),
                         Positioned(
                             bottom: 5,
